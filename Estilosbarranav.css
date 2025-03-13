@@ -1,0 +1,41 @@
+li a{
+	background-color: magenta;
+	color: white;
+	display: block;
+	padding: 16px;
+	text-decoration: none;
+}
+li a:hover{
+	background-color: mediumpurple;
+}
+li .activo{
+	background-color: purple;
+	color: white;
+}
+ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 20%;
+	height: 100%;
+	background-color: magenta;
+}
+h1{
+	font-family: "Rock Salt", cursive;
+}
+h2{
+	font-family: "Bebas Neue", sans-serif;
+}
+@font-face{
+	font-family: "Fuente";
+	scr: url(Bebas_Neue,Rock_Salt,Spicy_Rice/Spicy_Rice/SpicyRice-Regular.ttf) format("truetype");
+	font-weight: normal;
+    font-style: normal;
+} 
+h4{
+	font-family: "Fuente", cursive;
+}
+p{
+	font-family: "Fuente", cursive;
+	
+}
