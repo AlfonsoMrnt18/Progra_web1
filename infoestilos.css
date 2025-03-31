@@ -1,0 +1,33 @@
+p{
+	margin-left: 15%;
+	margin-right: 15%;
+	font-size: 150%;
+	font-family: "Fugaz One", sans-serif;
+}
+h1{
+	font-family: "Ultra", serif;
+	font-weight: normal;
+	font-size: 250%;
+	color: white;
+	text-align: center;
+}
+h2{
+	font-family: "Ultra", serif;
+	font-weight: normal;
+}
+header{
+	display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #522313;
+    padding: 10px 20px;
+}
+header h1{
+	margin: 5%; 
+}
+body{
+    background-color: #f5ebdc;
+}
+img{
+	margin-top: 2%;
+}
