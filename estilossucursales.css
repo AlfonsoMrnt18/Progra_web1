@@ -1,0 +1,91 @@
+body{
+    background-color: #e6dbdb;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    font-family: "Fugaz One", sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #522313;
+    padding: 10px 20px;
+ }
+ .boton{
+    background-color: #fbaf17;
+    color: #522313;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ .iniciarsesion{
+    background-color: #426b1f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+.mapa iframe{
+    margin-left: 5%;
+    margin-right: 5;
+    margin-bottom: 1%;
+}
+.mapa{
+    display: flex;
+    align-items: center; 
+    flex: 1; 
+}
+.mapa p{
+  flex: 1; 
+  padding-left: 10px;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+td {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+.galeria h2{
+    font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150%;
+}
