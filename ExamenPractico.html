@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="practico.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+	<title>Examen Practico</title>
+</head>
+<body>
+	<header>
+		<h1>Examen práctico Parcial 2</h1>
+	</header>
+	<h2>Alfonso Morante Zarate - 186827</h2>
+	<div class="boton">
+		<button onmouseenter="ocultar()" onmouseleave="mostrar()"><p>Galeria de imagenes</p></button>
+	</div>
+</br>
+	<div class="tabla">
+		<table align="center">
+			<tr>
+				<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiEtkpkiFL3P553MvHb266wa8Fn-ylXgPHOg&s" id="imagen1"
+	class="imagen1"> </td>
+				<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQaHxd1BKtSBKMXFZZYQ3iltgY34iNdeHhQw&s" id="imagen2"
+	class="imagen2"></td>
+				<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAdo0En0_V192gD_gEMhc3tmgBnElPrimWgQ&s" id="imagen3"
+	class="imagen3"></td>
+				<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRsAo91Sq2Dz7g6_cCPpuWPwg8SUbuANKEUfH_wFJ4j0v-zdNQrjtqHSOhdrOHUFwqEX8&usqp=CAU" id="imagen4"
+	class="imagen3"></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+		function ocultar() {
+        let imagenes = document.querySelectorAll(".tabla img");
+        imagenes.forEach(imagen => {
+            imagen.style.visibility = "hidden";
+        });
+    }
+		function mostrar() {
+        let imagenes = document.querySelectorAll(".tabla img");
+        imagenes.forEach(imagen => {
+            imagen.style.visibility = "visible";
+        });
+    }
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+	background: #f4efb7;
+}
+h1{
+	text-align: center;
+	font-family: "Sriracha", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+}
+h2{
+	text-align: center;
+	font-family: "Sriracha", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+}
+.boton{
+	text-align: center;
+}
+button{
+	background-color: skyblue;
+	color: black;
+}
+.boton p{
+	font-family: "Sriracha", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+
+}
+img{
+	width: 100%;
+	height: 100%;
+	border: 5px solid skyblue;
+	border-radius: 15px;
+}
+.tabla{
+	text-align: center;
+}
+td{
+	padding: 10px;
+}
+#imagen1{
+	visibility: visible;
+}
+.boton button:hover{
+    background-color: blue;
+    color: white;
+}
