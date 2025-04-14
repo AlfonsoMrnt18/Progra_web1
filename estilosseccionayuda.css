@@ -1,0 +1,105 @@
+body{
+    background-color: #e6dbdb;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    font-family: "Fugaz One", sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #522313;
+    padding: 10px 20px;
+ }
+ a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.boton{
+    background-color: #fbaf17;
+    color: #522313;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ .iniciarsesion{
+    background-color: #426b1f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ h1{
+    text-align: center;
+    font-size: 300%;
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fea443;
+ }
+ ul li{
+    font-size: 150%;
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ p{
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150%;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+ h3{
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150%;
+    color: #812f33;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+ footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b0200;
+    color: white;
+    text-align: left;
+}
+footer p{
+    margin-left: 1%;
+    margin-top: 1%;
+    font-family: "Ultra", serif;
+}
+.links a {
+            text-decoration: none;
+            color: #4CAF50;
+         }
+.links p{
+   font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
