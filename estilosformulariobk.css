@@ -1,18 +1,19 @@
-body 
-{ 
-  font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; 
+body { 
+  font-family: Arial, sans-serif; 
   background-color: #e6dbdb;
 }
-h2 
-{ 
+h2 { 
   color: #d62300; 
 }
-label 
-{ 
+label { 
   display: block; margin-top: 15px; 
 }
-    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
-    .resultado { margin-top: 15px; font-weight: bold; }
+input, select, textarea { 
+    width: 100%; padding: 8px; margin-top: 5px; 
+}
+.resultado { 
+    margin-top: 15px; font-weight: bold; 
+}
 button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -20,11 +21,21 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
     
-button:hover { background-color: #b71c00; }
-    .botones { display: flex; flex-wrap: wrap; gap: 10px; }
-    .container{
+button:hover { 
+    background-color: #b71c00; 
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+    .botones { 
+        display: flex; flex-wrap: wrap; gap: 10px;
+    }
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +72,7 @@ header{
     font-family: "Fugaz One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-bottom: 25px;
  }
  .iniciarsesion{
     background-color: #426b1f;
@@ -73,4 +85,50 @@ header{
     font-family: "Fugaz One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-bottom: 25px;
  }
+ label
+ {
+    padding: 20px; max-width: 600px; margin: auto; 
+ }
+ input{
+    padding: 20px; max-width: 600px; margin: auto; 
+ }
+ .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #185494;
+}
+input, textarea{
+    background-color: #fffbe5;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    color: #522313;
+}
+label{
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #522313;
+    font-size: 120%;
+}
+select{
+    ackground-color: #fffbe5;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90%;
+    color: #522313;
+}
+.terminos-label {
+  display: inline-flex;
+  align-items: center;
+}
