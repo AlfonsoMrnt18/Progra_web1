@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico HTML</title>
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+  <script type="text/javascript" src="jspdf.js"></script>
+  <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+  <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+  <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+  <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <link rel="stylesheet" href="estiloformulario.css">
+</head>
+<body>
+
+<h1>Formulario de Diagnóstico: HTML Básico</h1>
+
+<form id="diagnosticoForm">
+  <div class="pregunta">
+    <p>1. ¿Qué significa HTML?</p>
+    <label><input type="radio" name="respuesta1" value="a"> Hyper Trainer Marking Language</label><br>
+    <label><input type="radio" name="respuesta1" value="b"> HyperText Markup Language</label><br>
+    <label><input type="radio" name="respuesta1" value="c"> Hyper Tool Multi Language</label>
+  </div>
+
+  <div class="pregunta">
+    <p>2. ¿Cuál es el elemento correcto para insertar una imagen?</p>
+    <label><input type="radio" name="respuesta2" value="a"> img</label><br>
+    <label><input type="radio" name="respuesta2" value="b"> image</label><br>
+    <label><input type="radio" name="respuesta2" value="c"> pic</label>
+  </div>
+
+  <div class="pregunta">
+    <p>3. ¿Cuál etiqueta se usa para crear un enlace?</p>
+    <label><input type="radio" name="respuesta3" value="a"> link</label><br>
+    <label><input type="radio" name="respuesta3" value="b"> a</label><br>
+    <label><input type="radio" name="respuesta3" value="c"> href</label>
+  </div>
+
+  <div class="pregunta">
+    <p>4. ¿Cómo se crea un encabezado grande en HTML?</p>
+    <label><input type="radio" name="respuesta4" value="a"> head</label><br>
+    <label><input type="radio" name="respuesta4" value="b"> h1</label><br>
+    <label><input type="radio" name="respuesta4" value="c"> header</label>
+  </div>
+
+  <div class="pregunta">
+    <p>5. ¿Qué atributo se usa para definir un enlace?</p>
+    <label><input type="radio" name="respuesta5" value="a"> src</label><br>
+    <label><input type="radio" name="respuesta5" value="b"> href</label><br>
+    <label><input type="radio" name="respuesta5" value="c"> link</label>
+  </div>
+
+  <button type="submit">Enviar respuestas</button>
+</form>
+
+<div id="resultadoDiagnostico"></div>
+<div id="graficoResultados" style="width: 100%; max-width: 600px; margin: auto;"></div>
+<button id="botonDescargarPDF" style="display:none;">Descargar PDF</button>
+
+<script>
+  const respuestasCorrectas = {
+    respuesta1: 'b',
+    respuesta2: 'a',
+    respuesta3: 'b',
+    respuesta4: 'b',
+    respuesta5: 'b'
+  };
+
+  let puntajes = [];
+  google.charts.load('current', { packages: ['corechart'] });
+
+  document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    puntajes = [];
+    let totalPuntos = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const seleccion = document.querySelector(`input[name="respuesta${i}"]:checked`);
+      if (seleccion && seleccion.value === respuestasCorrectas[`respuesta${i}`]) {
+        totalPuntos++;
+        puntajes.push(1);
+      } else {
+        puntajes.push(0);
+      }
+    }
+
+    document.getElementById('resultadoDiagnostico').innerHTML = `<h2>Tu calificación: ${totalPuntos}/5</h2>`;
+    dibujarGrafico(puntajes);
+    document.getElementById('botonDescargarPDF').style.display = 'block';
+
+    localStorage.setItem('diagnosticoHTMLScore', totalPuntos);
+    localStorage.setItem('diagnosticoHTMLRespuestas', JSON.stringify(puntajes));
+  });
+
+  function dibujarGrafico(datos) {
+    const tablaDatos = new google.visualization.DataTable();
+    tablaDatos.addColumn('string', 'Pregunta');
+    tablaDatos.addColumn('number', 'Puntaje');
+
+    for (let i = 0; i < datos.length; i++) {
+      tablaDatos.addRow([`P${i + 1}`, datos[i]]);
+    }
+
+    const opciones = {
+      title: 'Resultados por Pregunta',
+      legend: { position: 'none' },
+      hAxis: { title: 'Pregunta' },
+      vAxis: { title: 'Correcto (1) o Incorrecto (0)', minValue: 0, maxValue: 1 }
+    };
+
+    const grafico = new google.visualization.ColumnChart(document.getElementById('graficoResultados'));
+    grafico.draw(tablaDatos, opciones);
+  }
+
+  document.getElementById('botonDescargarPDF').addEventListener('click', function () {
+    var doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text(20, 20, "Resultados del Diagnóstico de HTML");
+
+    var y = 40;
+    puntajes.forEach((valor, i) => {
+      var resultado = valor === 1 ? 'Correcta' : 'Incorrecta';
+      doc.setFontSize(12);
+      doc.text(20, y, `Pregunta ${i + 1}: ${resultado}`);
+      y += 10;
+    });
+
+    var total = puntajes.reduce((a, b) => a + b, 0);
+    doc.text(20, y + 10, `Calificación final: ${total}/5`);
+
+    doc.save("diagnostico_html.pdf");
+  });
+</script>
+
+</body>
+</html>
