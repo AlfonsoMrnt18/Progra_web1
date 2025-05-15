@@ -131,5 +131,134 @@ function initLandbot() {
     </section>
     <p>Página web desarrollada para la materia de Programación Web I. Primavera 2025. Universidad Politécnica de San Luis Potosí</p>
 </footer>
+	<script>
+  const bkForoContainer = document.getElementById('bkForoComentarios');
+  const bkForoForm = document.getElementById('bkForoForm');
+  const bkForoNombre = document.getElementById('bkForoNombre');
+  const bkForoTexto = document.getElementById('bkForoTexto');
+
+  // Arreglo para almacenar comentarios en sesión (no persistente)
+  let bkComentarios = [];
+
+  // Función para mostrar comentarios y respuestas
+  function mostrarBkComentarios() {
+    bkForoContainer.innerHTML = '';
+
+    bkComentarios.forEach((comentario, indice) => {
+      const divComentario = document.createElement('div');
+      divComentario.classList.add('bkComentario');
+
+      const encabezado = document.createElement('div');
+      encabezado.classList.add('bkComentarioEncabezado');
+      encabezado.textContent = comentario.username + ':';
+
+      const texto = document.createElement('div');
+      texto.classList.add('bkComentarioTexto');
+      texto.textContent = comentario.text;
+
+      // Botón responder
+      const botonResponder = document.createElement('button');
+      botonResponder.classList.add('bkBotonResponder');
+      botonResponder.textContent = 'Responder';
+      botonResponder.onclick = () => mostrarBkFormularioRespuesta(indice, divComentario);
+
+      divComentario.appendChild(encabezado);
+      divComentario.appendChild(texto);
+      divComentario.appendChild(botonResponder);
+
+      // Mostrar respuestas si existen
+      if (comentario.replies && comentario.replies.length > 0) {
+        comentario.replies.forEach(respuesta => {
+          const divRespuesta = document.createElement('div');
+          divRespuesta.classList.add('bkComentario');
+          divRespuesta.style.marginLeft = '30px';
+          divRespuesta.style.backgroundColor = '#eef7ee';
+
+          const encabezadoRespuesta = document.createElement('div');
+          encabezadoRespuesta.classList.add('bkComentarioEncabezado');
+          encabezadoRespuesta.textContent = respuesta.username + ' (respuesta):';
+
+          const textoRespuesta = document.createElement('div');
+          textoRespuesta.classList.add('bkComentarioTexto');
+          textoRespuesta.textContent = respuesta.text;
+
+          divRespuesta.appendChild(encabezadoRespuesta);
+          divRespuesta.appendChild(textoRespuesta);
+          divComentario.appendChild(divRespuesta);
+        });
+      }
+
+      bkForoContainer.appendChild(divComentario);
+    });
+  }
+
+  // Mostrar formulario para responder
+  function mostrarBkFormularioRespuesta(indiceComentario, contenedorComentario) {
+    // Evitar múltiples formularios de respuesta
+    if (contenedorComentario.querySelector('.bkFormularioRespuesta')) return;
+
+    const formulario = document.createElement('form');
+    formulario.classList.add('bkFormularioRespuesta');
+
+    const inputNombre = document.createElement('input');
+    inputNombre.type = 'text';
+    inputNombre.placeholder = 'Tu nombre';
+    inputNombre.required = true;
+    inputNombre.style.padding = '5px';
+    inputNombre.style.marginBottom = '5px';
+    inputNombre.style.width = '30%';
+
+    const textareaRespuesta = document.createElement('textarea');
+    textareaRespuesta.placeholder = 'Escribe tu respuesta aquí';
+    textareaRespuesta.required = true;
+    textareaRespuesta.rows = 2;
+    textareaRespuesta.style.width = '90%';
+
+    const botonEnviar = document.createElement('button');
+    botonEnviar.type = 'submit';
+    botonEnviar.textContent = 'Enviar Respuesta';
+
+    formulario.appendChild(inputNombre);
+    formulario.appendChild(document.createElement('br'));
+    formulario.appendChild(textareaRespuesta);
+    formulario.appendChild(document.createElement('br'));
+    formulario.appendChild(botonEnviar);
+
+    formulario.onsubmit = (e) => {
+      e.preventDefault();
+      const nombreResp = inputNombre.value.trim();
+      const textoResp = textareaRespuesta.value.trim();
+      if (!nombreResp || !textoResp) return alert('Por favor llena todos los campos');
+
+      if (!bkComentarios[indiceComentario].replies) {
+        bkComentarios[indiceComentario].replies = [];
+      }
+      bkComentarios[indiceComentario].replies.push({ username: nombreResp, text: textoResp });
+
+      mostrarBkComentarios();
+    };
+
+    contenedorComentario.appendChild(formulario);
+  }
+
+  // Manejar envío nuevo comentario
+  bkForoForm.onsubmit = function(e) {
+    e.preventDefault();
+    const nombre = bkForoNombre.value.trim();
+    const texto = bkForoTexto.value.trim();
+
+    if (!nombre || !texto) {
+      alert('Por favor llena todos los campos');
+      return;
+    }
+
+    bkComentarios.push({ username: nombre, text: texto, replies: [] });
+    bkForoForm.reset();
+    mostrarBkComentarios();
+  };
+
+  // Render inicial
+  mostrarBkComentarios();
+</script>
 </body>
 </html>
