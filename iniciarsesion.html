@@ -98,5 +98,16 @@
       }
     }
   </script>
+  <script>
+  function iniciarSesion() {
+    const usuario = document.getElementById("usuario").value;
+    if (usuario.trim() !== "") {
+      localStorage.setItem("usuario", usuario);
+      window.location.href = "index.html"; // Regresa a la página principal
+    } else {
+      alert("Escribe un nombre de usuario válido.");
+    }
+  }
+</script>
 </body>
 </html>
