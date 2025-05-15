@@ -89,10 +89,11 @@ iframe {
   font-style: normal;
   font-size: 150%;
 }
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: white; /* o el color que quieras, por ejemplo #d9230f */
-  text-decoration: none; /* quita el subrayado */
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  color: white !important;
+  text-decoration: none;
 }
+
