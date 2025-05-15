@@ -108,23 +108,25 @@ window.onload = function () {
     // Recomendación personalizada
     const recomendacion = document.createElement("div");
     recomendacion.innerHTML = `
-      <div style="margin-top: 20px; background: #fff3e0; border: 2px dashed #ff9800; padding: 15px; max-width: 500px; margin-left: auto; margin-right: auto; border-radius: 10px;">
-        <h3>⭐ Recomendación para ti, ${usuario}:</h3>
-        <p>¡Te encantará nuestro combo Whopper + papas grandes + malteada por $129!</p>
-        <a href="https://www.ubereats.com/mx/store/burger-king-slp/sc8A9qLTQpW9xmb7umr_Ug" target="_blank">
-          <button style="background-color: #ff5722; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Ordenar ahora</button>
-        </a>
-      </div>
-    `;
+  <div class="tarjeta-info">
+    <h3>⭐ Recomendación para ti, ${usuario}:</h3>
+    <p>¡Te encantará nuestro combo Whopper + papas grandes + malteada por $129!</p>
+    <a href="https://www.ubereats.com/mx/store/burger-king-slp/sc8A9qLTQpW9xmb7umr_Ug" target="_blank">
+      <button class="boton-ordenar">🍔 Ordenar ahora</button>
+    </a>
+  </div>
+`;
+
 
     // Cuenta regresiva para promoción
     const promoDiv = document.createElement("div");
     promoDiv.innerHTML = `
-      <div id="proximaPromo" style="margin-top: 20px; background: #fffde7; border-left: 6px solid #fbc02d; padding: 15px; max-width: 500px; margin-left: auto; margin-right: auto; border-radius: 10px;">
-        <h4>⏳ Próxima promoción en:</h4>
-        <p id="cuentaRegresiva" style="font-weight: bold; font-size: 18px;"></p>
-      </div>
-    `;
+  <div class="promocion-timer">
+    <h4>⏳ Próxima promoción en:</h4>
+    <p id="cuentaRegresiva"></p>
+  </div>
+`;
+
 
     const footer = document.querySelector("footer");
     document.body.insertBefore(recomendacion, footer);
