@@ -238,3 +238,44 @@ a {
   margin-bottom: 10px;
   text-shadow: 1px 1px #ffd700;
 }
+.tarjeta-info {
+  background: #fff3e0;
+  border: 2px dashed #ff9800;
+  padding: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-info h3 {
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.boton-ordenar {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fugaz One', sans-serif;
+}
+
+.boton-ordenar:hover {
+  background-color: #e64a19;
+}
+
+.promocion-timer {
+  background: #fffde7;
+  border-left: 6px solid #fbc02d;
+  padding: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+}
