@@ -89,23 +89,23 @@ iframe {
   font-style: normal;
   font-size: 150%;
 }
-nav a:link,
-nav a:visited,
-nav a:hover,
-nav a:active {
+nav li a:link,
+nav li a:visited,
+nav li a:hover,
+nav li a:active {
   color: white !important;
   text-decoration: none;
 }
-nav a:hover {
+nav li a:hover {
   color: #fbaf17 !important;
 }
-nav a {
+nav li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+nav li a:hover {
   text-decoration: underline;
 }
 
