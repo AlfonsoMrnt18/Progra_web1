@@ -238,44 +238,42 @@ a {
   margin-bottom: 10px;
   text-shadow: 1px 1px #ffd700;
 }
-.tarjeta-info {
-  background: #fff3e0;
-  border: 2px dashed #ff9800;
-  padding: 15px;
-  max-width: 500px;
-  margin: 20px auto;
-  border-radius: 10px;
-  text-align: center;
+.tarjeta-personal {
+  background-color: #fffaf0;
+  border: 2px solid #d2691e;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
   font-family: 'Shrikhand', cursive;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  color: #4e342e;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.tarjeta-info h3 {
+.tarjeta-personal h3,
+.tarjeta-personal h4 {
   color: #b22222;
   margin-bottom: 10px;
+}
+
+.tarjeta-personal p {
+  font-size: 1.1em;
 }
 
 .boton-ordenar {
   background-color: #ff5722;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   font-family: 'Fugaz One', sans-serif;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .boton-ordenar:hover {
   background-color: #e64a19;
 }
 
-.promocion-timer {
-  background: #fffde7;
-  border-left: 6px solid #fbc02d;
-  padding: 15px;
-  max-width: 500px;
-  margin: 20px auto;
-  border-radius: 10px;
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
-}
