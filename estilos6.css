@@ -87,7 +87,9 @@ header{
     margin-left: 5%;
     margin-right: 5%;
 }
-.btn {
+a .btn {
+    all: unset; /* Restablece estilos heredados */
+    display: inline-block;
     margin-left: auto;
     background-color: #ffcc00;
     color: black;
@@ -225,4 +227,14 @@ footer img{
 .conocenos button:hover{
     background-color: #2b0200;
     color: #ffcc00;
+}
+a {
+    text-decoration: none;
+}
+.saludo-personalizado {
+  font-family: 'Shrikhand', cursive;
+  font-size: 28px;
+  color: #B22222;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #ffd700;
 }
