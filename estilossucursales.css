@@ -96,4 +96,7 @@ nav a:active {
   color: white !important;
   text-decoration: none;
 }
+nav a:hover {
+  color: #fbaf17 !important;
+}
 
