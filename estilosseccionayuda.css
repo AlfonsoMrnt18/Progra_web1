@@ -103,3 +103,59 @@ footer p{
     font-weight: 400;
     font-style: normal;
 }
+#bkForoSeccion {
+  margin: 40px auto;
+  max-width: 800px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.bkComentario {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px #ddd;
+}
+
+.bkComentarioEncabezado {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bkComentarioTexto {
+  margin-bottom: 10px;
+}
+
+.bkBotonResponder {
+  color: #4CAF50;
+  cursor: pointer;
+  font-size: 0.9em;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.bkFormularioRespuesta {
+  margin-top: 10px;
+}
+
+.bkFormularioRespuesta textarea {
+  width: 90%;
+  padding: 5px;
+  resize: vertical;
+}
+
+.bkFormularioRespuesta button {
+  margin-top: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
