@@ -238,42 +238,45 @@ a {
   margin-bottom: 10px;
   text-shadow: 1px 1px #ffd700;
 }
-.tarjeta-personal {
-  background-color: #fffaf0;
-  border: 2px solid #d2691e;
-  border-radius: 15px;
+.tarjeta-recomendacion {
+  background-color: #fff3e0;
+  border: 3px solid #ff9800;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 30px auto;
   max-width: 600px;
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Ultra', serif;
   color: #4e342e;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.tarjeta-personal h3,
-.tarjeta-personal h4 {
-  color: #b22222;
+.tarjeta-recomendacion h3 {
+  font-family: 'Fugaz One', cursive;
+  color: #d84315;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.tarjeta-personal p {
-  font-size: 1.1em;
+.tarjeta-recomendacion p {
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .boton-ordenar {
   background-color: #ff5722;
   color: white;
-  font-family: 'Fugaz One', sans-serif;
+  font-family: 'Fugaz One', cursive;
   padding: 10px 25px;
   border: none;
-  border-radius: 8px;
-  margin-top: 15px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .boton-ordenar:hover {
   background-color: #e64a19;
 }
+
 
