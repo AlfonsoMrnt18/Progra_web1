@@ -1,0 +1,82 @@
+/* Asegurar que el padding entra en el ancho total */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6dbdb;
+  font-family: "Fugaz One", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 50px 30px 40px; /* más espacio a la derecha (50px) */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+  width: 100%;
+  padding: 12px 20px; /* aumenté padding horizontal */
+  margin-bottom: 20px;
+  border: 2px solid #fbaf17;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Fugaz One", sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+  border-color: #426b1f;
+}
+
+.container button {
+  width: 100%;
+  background-color: #fbaf17;
+  color: #522313;
+  border: none;
+  padding: 12px 0;
+  font-size: 18px;
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #d08a10;
+}
+
+.container h2 {
+  color: #522313;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.container p {
+  margin-top: 15px;
+  font-family: "Fugaz One", sans-serif;
+  font-size: 14px;
+  color: #522313;
+}
+
+.container p a {
+  color: #426b1f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.container p a:hover {
+  text-decoration: underline;
+}
