@@ -1,85 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registro - Burger King</title>
-  <style>
-    body {
-      margin: 0;
-      background: #fff6e5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .register-container {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #d62300;
-      margin-bottom: 1.5rem;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    button {
-      background: #d62300;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      width: 100%;
-      margin-top: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    a {
-      display: block;
-      margin-top: 1rem;
-      color: #d62300;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="estilosiniciarregistro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrarse</title>
 </head>
 <body>
-  <div class="register-container">
-    <h1>Registro</h1>
-    <form onsubmit="registrarUsuario(event)">
-      <input type="text" id="nuevoUsuario" placeholder="Crea tu usuario" required>
-      <input type="password" id="nuevaContrasena" placeholder="Crea tu contraseña" required>
-      <button type="submit">Registrarse</button>
-    </form>
-    <a href="iniciarsesion.html">¿Ya tienes cuenta? Inicia sesión</a>
+  <div class="container">
+    <h2>Registro</h2>
+    <input type="text" id="usuario" placeholder="Nombre de usuario" />
+    <input type="password" id="contrasena" placeholder="Contraseña" />
+    <input type="password" id="contrasena2" placeholder="Confirmar contraseña" />
+    <button onclick="registrar()">Registrarse</button>
+    <p>¿Ya tienes cuenta? <a href="iniciarsesion.html">Inicia sesión</a></p>
   </div>
 
   <script>
-    function registrarUsuario(event) {
-      event.preventDefault();
-      const usuario = document.getElementById("nuevoUsuario").value;
-      const contrasena = document.getElementById("nuevaContrasena").value;
+    function registrar() {
+      const usuario = document.getElementById("usuario").value.trim();
+      const contrasena = document.getElementById("contrasena").value.trim();
+      const contrasena2 = document.getElementById("contrasena2").value.trim();
 
-      localStorage.setItem("usuario", usuario);
-      localStorage.setItem("contrasena", contrasena);
-      alert("Usuario registrado. Ahora inicia sesión.");
-      window.location.href = "iniciarsesion.html";
+      if (!usuario || !contrasena || !contrasena2) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+
+      if (contrasena !== contrasena2) {
+        alert("Las contraseñas no coinciden.");
+        return;
+      }
+
+      let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
+
+      if (usuarios[usuario]) {
+        alert("Este usuario ya está registrado.");
+        return;
+      }
+
+      usuarios[usuario] = contrasena;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      localStorage.setItem("usuarioActual", usuario);
+      window.location.href = "Practica6.html";
     }
   </script>
 </body>
