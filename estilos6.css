@@ -72,7 +72,7 @@ header{
 .promo-image {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
     gap: 15px;
 }
 .promo-image img {
@@ -87,19 +87,24 @@ header{
     margin-left: 5%;
     margin-right: 5%;
 }
-a .btn {
-    all: unset; /* Restablece estilos heredados */
-    display: inline-block;
-    margin-left: auto;
+.btn {
     background-color: #ffcc00;
-    color: black;
-    padding: 10px 15px;
+    color: #2b0200;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+    border-radius: 8px;
     font-family: "Fugaz One", sans-serif;
-    font-size: 125%;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none !important;
+    transition: transform 0.2s;
+    margin-left: 15px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ffd633;
 }
 .cupones{
     display: flex;
@@ -148,6 +153,7 @@ a .btn {
 }
 .anuncio buttom{
     margin-right: 10%;
+    width: 80% !important;
 }
 .baner {
       position: relative;
