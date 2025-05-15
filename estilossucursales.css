@@ -99,4 +99,13 @@ nav a:active {
 nav a:hover {
   color: #fbaf17 !important;
 }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
 
