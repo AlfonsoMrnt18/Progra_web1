@@ -1,125 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-<html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilos6.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger King</title>
-    <link rel="icon" href="Burger_King_2020.svg.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="estilos6.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger King</title>
+  <link rel="icon" href="Burger_King_2020.svg.png" type="image/x-icon">
 </head>
 <body>
-	<header>
-		<a href="https://alfonsomrnt18.github.io/Progra_web1/registro.html" target="_blank">
-		<button class="boton">Regístrate</button>
-	</a>
-	<nav>
-		<ul>
-			<li>Menú</li>
-			<li><a href="https://alfonsomrnt18.github.io/Progra_web1/sucursales.html" target="_blank">Sucursales</a></li>
-            <li>Promociones</li>
-            <li>Contacto</li>
-		</ul>
-	</nav>
-	<a href="https://alfonsomrnt18.github.io/Progra_web1/iniciarsesion.html" target="_blank">
-		<button class="iniciarsesion">Iniciar Sesión</button>
-	</a>
-	</header>
-	</br>
-	<div class="container">
-	<img src="Captura de pantalla 2025-03-18 111540.png" width="20%" height="20%">
-	</div>
-	</br>
-	<section class="promo">
+  <header>
+    <button class="boton" id="btnRegistro" onclick="location.href='registro.html'">Regístrate</button>
+    <nav>
+      <ul>
+        <li>Menú</li>
+        <li><a href="https://alfonsomrnt18.github.io/Progra_web1/sucursales.html" target="_blank">Sucursales</a></li>
+        <li>Promociones</li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
+    <button class="iniciarsesion" id="btnLogin" onclick="location.href='iniciarsesion.html'">Iniciar Sesión</button>
+  </header>
+
+  <div id="infoUsuario" style="display: none; text-align: center; margin-top: 10px;">
+    <p id="saludoUsuario" style="font-weight: bold;"></p>
+    <button class="boton" onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  </br>
+  <div class="container">
+    <img src="Captura de pantalla 2025-03-18 111540.png" width="20%" height="20%">
+  </div>
+  </br>
+  <section class="promo">
     <div class="promo-info">
-        <p>Disfruta con BK Reyes exclusivo por Uber Eats:</p>
-        <p>Whopper Jr, Rodeo Burger, Papas Chicas, Refresco</p>
+      <p>Disfruta con BK Reyes exclusivo por Uber Eats:</p>
+      <p>Whopper Jr, Rodeo Burger, Papas Chicas, Refresco</p>
     </div>
     <div class="promo-image">
-        <span class="price">$99</span>
-        <img src="Captura de pantalla 2025-03-18 201828.png" alt="BKReyes" width="40%">
-        <button class="btn">Pídelo ahora</button>
+      <span class="price">$99</span>
+      <img src="Captura de pantalla 2025-03-18 201828.png" alt="BKReyes" width="40%">
+      <a href="https://www.ubereats.com/mx/store/burger-king-slp/sc8A9qLTQpW9xmb7umr_Ug/684ffe6b-48b8-5cb9-a589-9921b6f66416/5641b65c-d626-5da6-a313-51c6745d09e4/ac6a39ec-abdd-50db-b5f1-1dc0f50883f1" target="_blank">
+      <button class="btn">Pídelo ahora</button>
+      </a>
     </div>
-	</section>
-</br>
-</br>
-	<div class="cupones">
-		<img src="Captura de pantalla 2025-03-19 170743.png" alt="UberEatsApp" class="imagencel">
-		<p style="text-align: center;">Salva $$$ </br>con tus cupones</p>
-		<div class="icons">
-			<a href="https://play.google.com/store/apps/details?id=com.nosmk.burgerking&hl=es_MX" target="_blank"></br><img src="googleplay.png" alt="GooglePlay" width="80%"></a>
-            <a href="https://apps.apple.com/mx/app/burger-king-mexico/id1457228152" target="_blank"></br><img src="applestore.png" alt="AppStore" width="80%"></a>        
-        </div>
+  </section>
+  </br>
+  </br>
+  <div class="cupones">
+    <img src="Captura de pantalla 2025-03-19 170743.png" alt="UberEatsApp" class="imagencel">
+    <p style="text-align: center;">Salva $$$ </br>con tus cupones</p>
+    <div class="icons">
+      <a href="https://play.google.com/store/apps/details?id=com.nosmk.burgerking&hl=es_MX" target="_blank"></br><img src="googleplay.png" alt="GooglePlay" width="80%"></a>
+      <a href="https://apps.apple.com/mx/app/burger-king-mexico/id1457228152" target="_blank"></br><img src="applestore.png" alt="AppStore" width="80%"></a>
+    </div>
 
-        <div class="anuncio">
-            <p>1 Whopper sin queso + 2 Whopper Jr sin queso + 1 Crispy Chicken con queso + 2 papas chicas + 2 conos sencillos por solo $219 en Burger King</p>
-        	<button class="btn" style="margin-right: 5%; width: 50%;">Pídelo ahora</button>
-            <img src="Imagen1.png" class="Imagen1">
-        </div>
-	</div>
-</br>
-</br>
-<div class="baner">
-	<div class="anuncio2">
-		<p><span class="texto">Combos </br>del Rey</span><p style="font-size: 100%;">Incluye papas y refresco chicos.</p></p>
-	</div>
-	<div class="precio">
-		<p>$99 c/u</p>
-	</div>
-	<div class="combodelrey">
-		<img src="comborey.png" alt="Imagenparteblanca">
-	</div>
-</div>
-</br>
-</br>
-<div class="conocenos">
-<a href="https://alfonsomrnt18.github.io/Progra_web1/Informacion.html" target="_blank">
-	<button>
-		Conocenos
-	</button>
-</a>
-</div>
-<script>
-window.addEventListener('mouseover', initLandbot, { once: true });
-window.addEventListener('touchstart', initLandbot, { once: true });
-var myLandbot;
-function initLandbot() {
-  if (!myLandbot) {
-    var s = document.createElement('script');
-    s.type = "module"
-    s.async = true;
-    s.addEventListener('load', function() {
-      myLandbot = new Landbot.Popup({
-        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2926710-CIP13ZJ0U0NCKEAK/index.json',
-      });
-    });
-    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-  }
-}
-</script>
-<script>
-  document.getElementById("btnRegistro").addEventListener("click", function() {
-    window.location.href = "registro.html";
-  });
-
-  document.getElementById("btnLogin").addEventListener("click", function() {
-    window.location.href = "iniciarsesion.html";
-  });
-</script>
-</br>
-</br>
-<footer>
+    <div class="anuncio">
+      <p>1 Whopper sin queso + 2 Whopper Jr sin queso + 1 Crispy Chicken con queso + 2 papas chicas + 2 conos sencillos por solo $219 en Burger King</p>
+      <a href="https://www.ubereats.com/mx/store/burger-king-slp/sc8A9qLTQpW9xmb7umr_Ug/684ffe6b-48b8-5cb9-a589-9921b6f66416/4dccf6f5-099e-5717-8de1-ca7b8bf20e88/0ba3e7cd-1630-5695-884b-d49e39930da7" target="_blank">
+      <button class="btn" style="margin-right: 5%; width: 50%;">Pídelo ahora</button></a>
+      <img src="Imagen1.png" class="Imagen1">
+    </div>
+  </div>
+  </br>
+  </br>
+  <div class="baner">
+    <div class="anuncio2">
+      <p><span class="texto">Combos </br>del Rey</span><p style="font-size: 100%;">Incluye papas y refresco chicos.</p></p>
+    </div>
+    <div class="precio">
+      <p>$99 c/u</p>
+    </div>
+    <div class="combodelrey">
+      <img src="comborey.png" alt="Imagenparteblanca">
+    </div>
+  </div>
+  </br>
+  </br>
+  <div class="conocenos">
+    <a href="https://alfonsomrnt18.github.io/Progra_web1/Informacion.html" target="_blank">
+      <button>
+        Conocenos
+      </button>
+    </a>
+  </div>
+  </br>
+  <footer>
     <p>Redes sociales</p>
     <img src="redes.png" width="5%">
     <p>Página web desarrollada para la materia de Programación Web I. Primavera 2025. Universidad Politécnica de San Luis Potosí</p>
-</footer>
+  </footer>
+<script>
+window.onload = function () {
+  const usuario = localStorage.getItem("usuarioActual");
+  if (usuario) {
+    document.getElementById("btnLogin").style.display = "none";
+    document.getElementById("btnRegistro").style.display = "none";
+    document.getElementById("infoUsuario").style.display = "block";
+
+    // Mensaje de bienvenida animado
+    const saludo = document.getElementById("saludoUsuario");
+    saludo.innerHTML = `👑 Bienvenido, <span style="color: #B22222;">${usuario}</span> 🍔`;
+
+    // Recomendación personalizada
+    const recomendacion = document.createElement("div");
+    recomendacion.innerHTML = `
+      <div style="margin-top: 20px; background: #fff3e0; border: 2px dashed #ff9800; padding: 15px; max-width: 500px; margin-left: auto; margin-right: auto; border-radius: 10px;">
+        <h3>⭐ Recomendación para ti, ${usuario}:</h3>
+        <p>¡Te encantará nuestro combo Whopper + papas grandes + malteada por $129!</p>
+        <a href="https://www.ubereats.com/mx/store/burger-king-slp/sc8A9qLTQpW9xmb7umr_Ug" target="_blank">
+          <button style="background-color: #ff5722; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Ordenar ahora</button>
+        </a>
+      </div>
+    `;
+
+    // Cuenta regresiva para promoción
+    const promoDiv = document.createElement("div");
+    promoDiv.innerHTML = `
+      <div id="proximaPromo" style="margin-top: 20px; background: #fffde7; border-left: 6px solid #fbc02d; padding: 15px; max-width: 500px; margin-left: auto; margin-right: auto; border-radius: 10px;">
+        <h4>⏳ Próxima promoción en:</h4>
+        <p id="cuentaRegresiva" style="font-weight: bold; font-size: 18px;"></p>
+      </div>
+    `;
+
+    const footer = document.querySelector("footer");
+    document.body.insertBefore(recomendacion, footer);
+    document.body.insertBefore(promoDiv, footer);
+
+    iniciarCuentaRegresiva();
+  }
+};
+
+function iniciarCuentaRegresiva() {
+  const promoFecha = new Date("2025-05-20T12:00:00"); // Cambia esta fecha según tu evento
+  function actualizar() {
+    const ahora = new Date();
+    const diferencia = promoFecha - ahora;
+
+    if (diferencia > 0) {
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferencia / 1000) % 60);
+      document.getElementById("cuentaRegresiva").textContent =
+        `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+      setTimeout(actualizar, 1000);
+    } else {
+      document.getElementById("cuentaRegresiva").textContent = "¡Ya comenzó la promoción!";
+    }
+  }
+  actualizar();
+}
+
+function cerrarSesion() {
+  localStorage.removeItem("usuarioActual");
+  location.reload();
+}
+</script>
+
 </body>
 </html>
