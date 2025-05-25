@@ -10,140 +10,108 @@
   <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
   <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
   <link rel="stylesheet" type="text/css" href="estilosformulariobk.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1200px-Burger_King_2020.svg.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1200px-Burger_King_2020.svg.png" type="image/x-icon">
 </head>
 <body>
-	<header>
-<nav>
-	<ul>
-		<li><a href="https://alfonsomrnt18.github.io/Progra_web1/BurgerKing.html" target="_blank">Menú</a></li>
-		<li><a href="https://alfonsomrnt18.github.io/Progra_web1/sucursales.html" target="_blank">Sucursales</a></li>
-		<li><a href="https://alfonsomrnt18.github.io/Progra_web1/secciondeayuda.html" target="_blank">Foro</a></li>
-		<li><a href="https://alfonsomrnt18.github.io/Progra_web1/formularioburgerking.html" target="_blank">Contacto</a></li>
-	</ul>
-</nav>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://alfonsomrnt18.github.io/Progra_web1/BurgerKing.html" target="_blank">Menú</a></li>
+        <li><a href="https://alfonsomrnt18.github.io/Progra_web1/sucursales.html" target="_blank">Sucursales</a></li>
+        <li><a href="https://alfonsomrnt18.github.io/Progra_web1/secciondeayuda.html" target="_blank">Foro</a></li>
+        <li><a href="https://alfonsomrnt18.github.io/Progra_web1/formularioburgerking.html" target="_blank">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
 
-	</header>
-	</br>
   <div class="container">
-  <img src="Captura de pantalla 2025-03-18 111540.png" width="20%" height="20%">
+    <img src="Captura de pantalla 2025-03-18 111540.png" width="20%" height="20%">
   </div>
+
   <h2 style="text-align: center;">Encuesta de Satisfacción - Burger King</h2>
 
-  <label for="nombres">
-  Nombres:
-  <input type="text" id="nombres" required>
-</label><br>
+  <form action="https://formsubmit.co/186827@upslp.edu.mx" method="POST">
+    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> 
+    <input type="hidden" name="_captcha" value="false">
 
-<label for="apellidos">
-  Apellidos:
-  <input type="text" id="apellidos" required>
-</label><br>
+    <label>
+      Nombres:
+      <input type="text" name="nombres" id="nombres" required>
+    </label><br>
 
-<label for="correo">
-  Correo electrónico:
-  <input type="email" id="correo" required>
-</label><br>
+    <label>
+      Apellidos:
+      <input type="text" name="apellidos" id="apellidos" required>
+    </label><br>
 
-<label for="productos">
-  Calidad de los productos (1-5):
-  <select id="productos">
-    <option value="0">Seleccione una opción</option>
-    <option value="1">1 - Muy mala</option>
-    <option value="2">2 - Mala</option>
-    <option value="3">3 - Regular</option>
-    <option value="4">4 - Buena</option>
-    <option value="5">5 - Excelente</option>
-  </select>
-</label><br>
+    <label>
+      Correo electrónico:
+      <input type="email" name="correo" id="correo" required>
+    </label><br>
 
-<label for="servicio">
-  Calidad del servicio (1-5):
-  <select id="servicio">
-    <option value="0">Seleccione una opción</option>
-    <option value="1">1 - Muy malo</option>
-    <option value="2">2 - Malo</option>
-    <option value="3">3 - Regular</option>
-    <option value="4">4 - Bueno</option>
-    <option value="5">5 - Excelente</option>
-  </select>
-</label><br>
+    <label>
+      Calidad de los productos (1-5):
+      <select name="productos" id="productos" required>
+        <option value="">Seleccione una opción</option>
+        <option value="1">1 - Muy mala</option>
+        <option value="2">2 - Mala</option>
+        <option value="3">3 - Regular</option>
+        <option value="4">4 - Buena</option>
+        <option value="5">5 - Excelente</option>
+      </select>
+    </label><br>
 
-<label for="empleados">
-  Atención de los empleados (1-5):
-  <select id="empleados">
-    <option value="0">Seleccione una opción</option>
-    <option value="1">1 - Muy mala</option>
-    <option value="2">2 - Mala</option>
-    <option value="3">3 - Regular</option>
-    <option value="4">4 - Buena</option>
-    <option value="5">5 - Excelente</option>
-  </select>
-</label><br>
+    <label>
+      Calidad del servicio (1-5):
+      <select name="servicio" id="servicio" required>
+        <option value="">Seleccione una opción</option>
+        <option value="1">1 - Muy malo</option>
+        <option value="2">2 - Malo</option>
+        <option value="3">3 - Regular</option>
+        <option value="4">4 - Bueno</option>
+        <option value="5">5 - Excelente</option>
+      </select>
+    </label><br>
 
-<label for="comentarios">
-  Quejas y/o sugerencias:
-  <textarea id="comentarios" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
-</label><br>
+    <label>
+      Atención de los empleados (1-5):
+      <select name="empleados" id="empleados" required>
+        <option value="">Seleccione una opción</option>
+        <option value="1">1 - Muy mala</option>
+        <option value="2">2 - Mala</option>
+        <option value="3">3 - Regular</option>
+        <option value="4">4 - Buena</option>
+        <option value="5">5 - Excelente</option>
+      </select>
+    </label><br>
 
-<label for="terminos" class="terminos-label">
-  <input type="checkbox" id="terminos" required>
-  Acepto los términos y condiciones
-</label><br>
+    <label>
+      Quejas y/o sugerencias:
+      <textarea name="comentarios" id="comentarios" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
+    </label><br>
+
+    <label class="terminos-label">
+      <input type="checkbox" name="terminos" id="terminos" required>
+      Acepto los términos y condiciones
+    </label><br><br>
+
+    <div class="botones">
+      <button type="submit">Enviar Evaluación</button>
+      <button type="button" onclick="generarPDF()">Generar PDF</button>
+      <button type="button" onclick="reiniciarFormulario()">Reiniciar</button>
+    </div>
+  </form>
 
   <div class="resultado" id="mensaje" style="font-weight: bold;"></div><br>
-
-  <div class="botones">
-    <button onclick="evaluar()">Enviar Evaluación</button>
-    <button onclick="generarPDF()">Generar PDF</button>
-    <button onclick="reiniciarFormulario()">Reiniciar</button>
-  </div>
-  <label>
-  
-
-  <br>
   <iframe src="" name="contenedor" width="700" height="900" frameborder="0"></iframe>
 
   <script>
-    function evaluar() {
-      const nombres = document.getElementById('nombres').value.trim();
-      const apellidos = document.getElementById('apellidos').value.trim();
-      const correo = document.getElementById('correo').value;
-      const prod = parseInt(document.getElementById('productos').value);
-      const serv = parseInt(document.getElementById('servicio').value);
-      const empl = parseInt(document.getElementById('empleados').value);
-      const terminos = document.getElementById('terminos').checked;
-
-      if (!nombres || !apellidos || !correo || prod === 0 || serv === 0 || empl === 0 || !terminos) {
-    alert("Por favor completa todos los campos y acepta los términos y condiciones antes de enviar.");
-    return;
-  }
-
-  const total = prod + serv + empl;
-  let mensaje = "";
-
-
-      if (total <= 6) {
-    mensaje = "Lamentamos que tu experiencia no haya sido satisfactoria. Tomaremos en cuenta tus comentarios.";
-  } else if (total <= 10) {
-    mensaje = "Gracias por tu retroalimentación. Seguiremos mejorando.";
-  } else {
-    mensaje = "¡Gracias por tu excelente evaluación! Nos alegra que hayas tenido una gran experiencia.";
-  }
-
-  document.getElementById('mensaje').textContent = mensaje;
-}
-
-
     function generarPDF() {
       const nombres = document.getElementById('nombres').value.trim();
       const apellidos = document.getElementById('apellidos').value.trim();
@@ -152,12 +120,19 @@
       const serv = document.getElementById('servicio').options[document.getElementById('servicio').selectedIndex].text;
       const empl = document.getElementById('empleados').options[document.getElementById('empleados').selectedIndex].text;
       const comentarios = document.getElementById('comentarios').value;
-      const mensaje = document.getElementById('mensaje').textContent;
 
-      if (!nombres || !apellidos || !correo || prod === "Seleccione una opción") {
-        alert("Debes completar y enviar la evaluación antes de generar el PDF.");
-        return;
+      const total = parseInt(document.getElementById('productos').value) + parseInt(document.getElementById('servicio').value) + parseInt(document.getElementById('empleados').value);
+      let mensaje = "";
+
+      if (total <= 6) {
+        mensaje = "Lamentamos que tu experiencia no haya sido satisfactoria.";
+      } else if (total <= 10) {
+        mensaje = "Gracias por tu retroalimentación.";
+      } else {
+        mensaje = "¡Gracias por tu excelente evaluación!";
       }
+
+      document.getElementById('mensaje').textContent = mensaje;
 
       const doc = new jsPDF();
       doc.setFontSize(12);
@@ -173,17 +148,11 @@
       doc.text(mensaje, 20, 135, { maxWidth: 170 });
 
       const strimg = doc.output('datauristring');
-      $('iframe').attr('src', strimg); // mostrar en el iframe
+      document.querySelector('iframe').src = strimg;
     }
 
     function reiniciarFormulario() {
-      document.getElementById('nombres').value = '';
-      document.getElementById('apellidos').value = '';
-      document.getElementById('correo').value = '';
-      document.getElementById('productos').selectedIndex = 0;
-      document.getElementById('servicio').selectedIndex = 0;
-      document.getElementById('empleados').selectedIndex = 0;
-      document.getElementById('comentarios').value = '';
+      document.querySelector('form').reset();
       document.getElementById('mensaje').textContent = '';
       document.querySelector('iframe').src = '';
     }
